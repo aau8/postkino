@@ -1,0 +1,8 @@
+{% macro sectionHeader( title, text ) %}
+	<div class="s-header">
+		<div class="s-header__content">
+			<h2 class="title-2 s-header__title">{{ title | safe }}</h2>
+			<p class="s-header__text">{{ text }}</p>
+		</div>
+	</div>
+{% endmacro %}

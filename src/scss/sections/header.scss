@@ -1,0 +1,232 @@
+.header {
+	--zIndex: 2;
+
+	position: relative;
+	z-index: 1;
+}
+
+.header__area {
+	width: 100%;
+	height: var(--header-height);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 120%;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.97) 37.25%, rgba(0, 0, 0, 0) 84.02%);
+	}
+}
+
+@import "../../dismal_modules/FixHeader/style";
+
+.header__container {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+// Меню
+.menu {
+
+	@media (max-width: $hide-menu) {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		// display: flex;
+		pointer-events: none;
+		transition: background-color $tr;
+
+		&.is-show {
+			background-color: rgba(0,0,0,.2);
+			pointer-events: fill;
+
+			& .menu__wrap {
+				transform: translate(0, 0);
+			}
+		}
+	}
+}
+
+.menu__wrap {
+
+	@media (max-width: $hide-menu) {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		background: $dark;
+		box-shadow: 0 1px 1px $dark;
+		overflow: auto;
+		transform: translate(100%, 0);
+		transition: transform $tr;
+
+		@include scrollbar(6px, 100%);
+	}
+}
+
+.menu__header {
+	display: none;
+
+	@media (max-width: $hide-menu) {
+		width: 100%;
+		min-height: var(--header-height);
+		height: var(--header-height);
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 var(--container-padding);
+	}
+}
+
+.menu__header-title {
+
+}
+
+.menu__header-close {
+
+}
+
+.menu__body {
+
+	@media (max-width: $hide-menu) {
+		flex: 1 1 0;
+		padding: 0 var(--container-padding);
+		margin-top: 16px;
+	}
+}
+
+.menu__list {
+	display: flex;
+	align-items: center;
+
+	@media (max-width: $hide-menu) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-right: 30px;
+
+			@media (max-width: 1000px) {
+				margin-right: 20px;
+			}
+
+			@media (max-width: 900px) {
+				margin-right: 14px;
+			}
+
+			@media (max-width: $hide-menu) {
+				margin: 0 0 54px;
+			}
+		}
+	}
+}
+
+.menu__list-item {
+	font-size: rem(16);
+
+	@media (max-width: 900px) {
+		font-size: rem(15);
+	}
+
+	@media (max-width: $hide-menu) {
+		width: 100%;
+		display: inline-block;
+		font-size: rem(16);
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: rem(14);
+	}
+
+	& a {
+		position: relative;
+		display: inline-block;
+		padding: 2px 12px;
+
+		@include link;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: calc(100% - 24px);
+			height: 1px;
+			background: $accent;
+			opacity: 0;
+			transition: opacity $tr;
+
+			@media (max-width: $hide-menu) {
+				display: none;
+			}
+		}
+
+		&:hover {
+
+			&::before {
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: $hide-menu) {
+			width: 100%;
+			padding: 6px 0;
+		}
+	}
+}
+
+.menu__footer {
+	display: none;
+
+	@media (max-width: $hide-menu) {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		padding: 40px var(--container-padding);
+	}
+}
+
+.menu__email {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu__email-title {
+	color: $accent;
+}
+
+.menu__email-link {
+	display: inline-block;
+	margin-top: 4px;
+}
+
+.menu__socials {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.menu__social {
+	color: $accent;
+}
+
+.header__burger {
+	display: none;
+
+	@media (max-width: $hide-menu) {
+		display: block;
+	}
+}

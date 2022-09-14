@@ -1,0 +1,86 @@
+// Основной шаблон кнопки
+.btn {
+	--color: #{$light};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(22);
+    font-weight: 400;
+	line-height: 1.5;
+	color: var(--color, $light);
+	border: 2px solid var(--color);
+    border-radius: $radius-s;
+	padding: 18px 24px;
+    white-space: nowrap;
+    user-select: none;
+    transition: $tr;
+
+	&.has-icon {
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 54px;
+			height: 14px;
+			// @include strictSize( var(--icon-size, 24px) );
+			mask: center/contain no-repeat url('../img/sprite.svg#arrow-long');
+			// vertical-align: middle;
+			background: var(--icon-color, var(--color));
+			margin-left: 24px;
+			transition: $tr;
+		}
+	}
+
+	&:active {
+
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			--color: #{$accent};
+		}
+
+		&:active {
+
+		}
+	}
+}
+
+@mixin link {
+	--color: #{$text-primary};
+
+	color: var(--color);
+	transition: $tr;
+
+	&:active {
+		--color: #{$accent};
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			--color: #{$accent};
+		}
+
+		&:active {
+			--color: #{$accent};
+			opacity: .8;
+		}
+	}
+}
+
+.link {
+	@include link;
+
+    @media (any-hover: hover) {
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &:active {
+        color: brig-color($accent, active);
+    }
+}

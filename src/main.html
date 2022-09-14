@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="main" style="background-image: url(./assets/img/main/1.jpg)">
+				{% include "sections/header.html" %}
+				<div class="main__body">
+					<div class="main__container">
+						<div class="main__content">
+							<h1 class="title-1 main__title">POST<span>KINO</span></h1>
+							<span class="title-2 main__subtitle">Production | Post - production Studio</span>
+							<a href="#" class="btn has-icon main__btn">Portfolio</a>
+						</div>
+						<div class="main__slider">
+							<div class="swiper main__slider-container" data-swiper="main">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/1.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/2.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/3.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/4.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/5.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/6.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/7.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/8.jpg" alt="" />
+									</div>
+									<div class="swiper-slide main-slide">
+										<img src="./assets/img/movies/9.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-arrows main__arrows">
+								<button
+									class="swiper-arrow is-prev main__arrow"
+									style="transform: rotate(180deg)"
+								></button>
+								<button class="swiper-arrow is-next main__arrow"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<div class="content">
+				<section class="section s-about">
+					<div class="s-about__container">
+						<h1 class="title-1 s-about__title">About Us</h1>
+						<p class="title-3 s-about__text">
+							POST<span>KINO</span> studio was founded in 2010 and nowadays works successfully in the
+							field of computer graphics and visual effects production for movies, TV series and
+							advertising.
+						</p>
+					</div>
+				</section>
+
+				<section class="section s-areas">
+					<div class="s-areas__container">
+						<div class="s-header">
+							<h2 class="title-2 s-header__title">Our <span>main areas</span> of focus:</h2>
+						</div>
+						<div class="s-areas__body">
+							<a href="#" class="c-area" style="background-image: url(./assets/img/services/vfx.jpg)">
+								<div class="c-area__content">
+									<span class="title-3 c-area__title">Visual effects</span>
+								</div>
+							</a>
+							<a href="#" class="c-area" style="background-image: url(./assets/img/services/sfx.jpg)">
+								<div class="c-area__content">
+									<span class="title-3 c-area__title">Composer and sound <br />design services</span>
+								</div>
+							</a>
+							<a href="#" class="c-area" style="background-image: url(./assets/img/services/filming.jpg)">
+								<div class="c-area__content">
+									<span class="title-3 c-area__title">Filming</span>
+								</div>
+							</a>
+							<a href="#" class="c-area" style="background-image: url(./assets/img/services/editing.jpg)">
+								<div class="c-area__content">
+									<span class="title-3 c-area__title">Full video <br />editing cycle</span>
+								</div>
+							</a>
+							<a
+								href="#"
+								class="c-area"
+								style="background-image: url(./assets/img/services/color-grading.jpg)"
+							>
+								<div class="c-area__content">
+									<span class="title-3 c-area__title"
+										>Color grading of movies, <br />TV series and commercials</span
+									>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="section s-why">
+					<div class="s-why__container">
+						<div class="s-header">
+							<h2 class="title-2 s-header__title">Why is it worth working <span>with us?</span></h2>
+						</div>
+						<div class="s-why__body">
+							<ul class="s-why__list">
+								<li class="title-3 s-why__item">Team of enthusiastic <br />professionals</li>
+								<li class="title-3 s-why__item">Vast experience <br />in movies and TV</li>
+								<li class="title-3 s-why__item">Flexible approach <br />to customer comments</li>
+								<li class="title-3 s-why__item">Healthy <br />perfectionism</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			{% include "sections/footer.html" %}
+		</div>
+
+		<a href="http://ugryumov.com" style="display: none">front-end</a>
+		<script src="./assets/js/bundle.js"></script>
+	</body>
+</html>

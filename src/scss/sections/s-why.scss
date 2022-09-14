@@ -1,0 +1,49 @@
+.s-why__body {
+
+}
+
+.s-why__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 100px 50px;
+	counter-reset: why;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: $tablet) {
+		gap: 25px;
+	}
+}
+
+.s-why__item {
+	display: flex;
+	align-items: center;
+
+	&::before {
+		counter-increment: why;
+		content: "0"counter(why);
+		max-width: 100px;
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(34);
+		color: $dark;
+		background: $accent;
+		border-radius: $radius-s;
+		margin-right: 50px;
+
+		@media (max-width: $tablet) {
+			font-size: rem(28);
+		}
+
+		@media (max-width: $mobile-l) {
+			width: 74px;
+			font-size: rem(20);
+			margin-right: 20px;
+		}
+	}
+}

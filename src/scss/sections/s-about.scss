@@ -1,0 +1,33 @@
+.s-about {
+
+}
+
+.s-about__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	@media (max-width: $mobile-l) {
+		align-items: flex-start;
+		text-align: left;
+	}
+}
+
+.s-about__title {
+
+}
+
+.s-about__text {
+	max-width: 840px;
+	line-height: 1.5;
+	margin-top: 75px;
+
+	@media (max-width: $tablet) {
+		margin-top: 50px;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-top: 36px;
+	}
+}
