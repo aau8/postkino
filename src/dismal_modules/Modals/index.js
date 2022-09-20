@@ -53,14 +53,14 @@ export default class Modals {
 		modalShow: 'is-show',
 		modalBg: 'modal__bg',
 	}
-	modalList = document.querySelectorAll(`[${this.attrs.modalId}]`)
-	openingBtnList = document.querySelectorAll(`[${this.attrs.btnModalOpen}]`)
+	modalList = Array.from(document.querySelectorAll(`[${this.attrs.modalId}]`))
+	openingBtnList = Array.from(document.querySelectorAll(`[${this.attrs.btnModalOpen}]`))
 	openBtn = null
 	modalIsShow = false
 	modalShow = null
 	modalShowId = null
 	keyEsc = true
-	useHash = true
+	useHash = false
 	historyHash = !this.useHash ? false : false
 	hash = null
 

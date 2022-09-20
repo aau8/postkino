@@ -1,4 +1,4 @@
-import { bodyLock, bodyUnlock } from "Utilities"
+import { bodyLock, bodyUnlock } from '../Utilities.js'
 
 // Увеличение изображения при клике по нему. У изображения должен быть атрибут data-zoom
 // Любое изображение у которого есть родитель с классом text будет открываться при клике

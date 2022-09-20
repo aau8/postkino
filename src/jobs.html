@@ -8,8 +8,16 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
 	<body>
+		<div class="loader" id="loader">
+			<div class="loader__wrap">
+				<div class="loader__body">
+					<div class="loader__icon"></div>
+					<div class="loader__progress" style="--progress: 0px;"></div>
+				</div>
+			</div>
+		</div>
 		<div class="wrapper">
-			<main class="main" style="background-image:url(./assets/img/main/4.jpg);">
+			<main class="main">
 				{% include "sections/header.html" %}
 				<div class="main__body">
 					<div class="main__container">
@@ -18,7 +26,7 @@
 							<span class="title-2 main__subtitle">We are always <span>expanding</span> and looking <br>for enthusiastic CG professionals</span>
 							<div class="title-3 main__text">
 								<p>
-									Mandatory requirement is the ability to work in a team, responsiveness, and a desire to <br>develop and help others grow.
+									Mandatory requirement is the ability to work in a team, responsiveness, and a desire to develop and help others grow.
 								</p>
 								<p>
 									Email  us  <a href="#">info@postkino.ru</a>
@@ -27,6 +35,7 @@
 						</div>
 					</div>
 				</div>
+				<div class="main__bg"><img src="./assets/img/main/4.jpg" alt="" /></div>
 			</main>
 
 			<div class="content"></div>

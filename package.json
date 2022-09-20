@@ -10,7 +10,7 @@
 		"sprite": "npx mix --mix-config=./config/sprite.mix.cjs",
 		"html:prettier": "npx prettier --write ./prod/**/*.html !./prod/index.html",
 		"deploy": "gulp ftp",
-		"deploy:prod": "npm run prod && gulp ftp",
+		"prod:deploy": "npm run prod && gulp ftp",
 		"zip": "npm run prod && gulp zip"
 	},
 	"author": "Artem Ugryumov",
@@ -54,6 +54,8 @@
 		"vinyl-ftp": "^0.6.1"
 	},
 	"dependencies": {
+		"imagesloaded": "^5.0.0",
+		"smoothscroll-for-websites": "^1.4.10",
 		"swiper": "^8.3.2"
 	}
 }

@@ -16,6 +16,30 @@
 		height: 100px;
 		background: linear-gradient(0, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0) 100%);
 	}
+
+	&:active {
+		transform: scale(.95);
+	}
+
+	@media (any-hover: hover) {
+		transition: $tr;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&:active {
+			transform: scale(1.05);
+		}
+	}
+
+	// &.is-active {
+	// 	transform: scale(1.1);
+	// }
+
+	&.is-darkened {
+		opacity: .4;
+	}
 }
 
 .c-area__content {

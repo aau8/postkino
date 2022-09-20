@@ -115,6 +115,20 @@ body {
         flex: 1 0 auto;
         position: relative;
         z-index: 1;
+
+		&.has-shadow {
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 380px;
+				background: linear-gradient(180deg, #000000 12.69%, rgba(0, 0, 0, 0) 84.02%);
+			}
+		}
     }
 }
 
@@ -171,6 +185,13 @@ body {
 
 // Карточки
 @import "./components/cards/c-area";
+@import "./components/cards/c-movie";
+@import "./components/cards/c-advert";
+
+
+// Блоки
+@import "./components/blocks/loader";
+@import "./components/blocks/b-service";
 
 
 // Модальные окна
@@ -183,6 +204,11 @@ body {
 @import "./sections/s-about";
 @import "./sections/s-areas";
 @import "./sections/s-why";
+@import "./sections/s-services";
+@import "./sections/gallery";
+@import "./sections/reels";
+@import "./sections/movies";
+@import "./sections/advert";
 @import "./sections/footer";
 
 

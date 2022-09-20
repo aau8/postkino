@@ -1,0 +1,27 @@
+.s-services {
+
+
+}
+
+.s-services__container {
+	position: relative;
+	z-index: 1;
+}
+
+.s-services__body {
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-bottom: 230px;
+
+			@media (max-width: $tablet) {
+				margin-bottom: 150px;
+			}
+
+			@media (max-width: 700px) {
+				margin-bottom: 85px;
+			}
+		}
+	}
+}

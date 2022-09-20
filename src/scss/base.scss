@@ -11,10 +11,16 @@
 // @import "./components/ui/textfield";
 
 // Модальные окна
-// @import "../dismal_modules/Modals/style.scss";
+@import "../dismal_modules/Modals/style.scss";
 
 // Аккордеоны (Спойлеры)
 // @import "../dismal_modules/Accordions/style.scss";
 
 // Подпись
 @import "../dismal_modules/Signa/style";
+
+// Увеличить изображение при клике по нему
+@import "../dismal_modules/ZoomInImg/style.scss";
+
+// Ленивая загрузка видео
+@import "../dismal_modules/LazyVideo/style.scss";

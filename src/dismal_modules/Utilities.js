@@ -15,6 +15,36 @@ export function removeAllClasses(items, itemClass) {
 }
 //========================================================================================================================================================
 
+// Анимация
+export function animate({ draw, duration, end, start }) {
+	if (start) {
+		start()
+	}
+
+	let timeStart = performance.now();
+
+	requestAnimationFrame(function animate(time) {
+		// timeFraction изменяется от 0 до 1
+		let timeFraction = (time - timeStart) / duration;
+		if (timeFraction < 0) timeFraction = 0;
+		if (timeFraction > 1) timeFraction = 1;
+
+		// вычисление текущего состояния анимации
+		// let progress = timing(timeFraction);
+		let progress = timeFraction;
+
+		draw(progress); // отрисовать её
+
+		if (timeFraction < 1) {
+			requestAnimationFrame(animate);
+		}
+		else {
+			if (end) {
+				end()
+			}
+		}
+	});
+}
 
 // Создает Array из NodeList и возвращает его
 export function nodeArray(selector, parent = document) {

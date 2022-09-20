@@ -150,14 +150,11 @@
 	top: 0;
 	pointer-events: none;
 }
-.swiper-button-next,
-.swiper-button-prev {
 
-	&.swiper-button-disabled {
-		opacity: 0.35;
-		cursor: auto;
-		pointer-events: none;
-	}
+.swiper-button-disabled {
+	opacity: 0.35;
+	pointer-events: none;
+	cursor: auto;
 }
 
 .swiper-button-lock {
@@ -186,4 +183,27 @@
 	&.is-prev {
 
 	}
+
+	&:active {
+		background: $light;
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			background: $light;
+		}
+
+		&:active {
+			background: $stroke-gray;
+		}
+	}
+}
+
+.swiper-grid > .swiper-wrapper {
+	flex-wrap: wrap
+}
+.swiper-grid-column > .swiper-wrapper {
+	flex-direction: column;
+	flex-wrap: wrap
 }

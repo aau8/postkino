@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="loader" id="loader">
+			<div class="loader__wrap">
+				<div class="loader__body">
+					<div class="loader__icon"></div>
+					<div class="loader__progress" style="--progress: 0px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<main class="main">
+				{% include "sections/header.html" %}
+				<div class="main__body">
+					<div class="main__container">
+						<div class="main__content">
+							<h1 class="title-1 main__title">Portfolio</h1>
+						</div>
+						<div class="main__slider">
+							<div class="swiper portfolio__slider-container" data-swiper="portfolio">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Advertising</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/portfolio/1.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Movies | Series</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/portfolio/2.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Reels</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/portfolio/3.jpg" alt="" /></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-arrows main__arrows portfolio__arrows">
+								<button
+									class="swiper-arrow is-prev portfolio__arrow"
+									style="transform: rotate(180deg)"
+								></button>
+								<button class="swiper-arrow is-next portfolio__arrow"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__bg">
+					<div class="swiper main__bg-container" data-swiper="main-bg">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/3.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/4.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<div class="content has-shadow">
+				<section class="section reels">
+					<div class="reels__container">
+						<div class="s-header">
+							<h2 class="title-1 s-header__title">Reels</h2>
+						</div>
+						<div class="reels__body">
+							<div class="reels-pagin"></div>
+							<div class="reels__slider">
+								<div class="swiper reels__slider-container" data-swiper="reels">
+									<div class="swiper-wrapper">
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">Animation</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">Environments</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">Crowds</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">VFX</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">Compositing</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+										<a href="javascript:void(0)" class="swiper-slide reels-slide" data-modal-open="video" data-video-src="https://www.youtube.com/embed/jfKfPfyJRdk">
+											<div class="reels-slide__content">
+												<span class="title-3 reels-slide__title">Motion Design</span>
+											</div>
+											<div class="reels-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-arrows reels__arrows">
+									<button
+										class="swiper-arrow is-prev reels__arrow"
+										style="transform: rotate(180deg)"
+									></button>
+									<button class="swiper-arrow is-next reels__arrow"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section movies">
+					<div class="movies__container">
+						<div class="s-header">
+							<h2 class="title-1 s-header__title">Movies | Series</h2>
+						</div>
+						<div class="movies__body">
+							<div class="movies__sliders">
+								<div class="movies__slider">
+									<div class="swiper movies__slider-container" data-swiper="movies-first">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide movies-slide">
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/1.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/1.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/2.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/2.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/3.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/3.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie is-year">
+													<span class="title-3 c-movie__year">2021</span>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/4.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/4.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/5.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/5.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide movies-slide">
+												<div class="c-movie is-year">
+													<span class="title-3 c-movie__year">2020</span>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/1.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/1.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/2.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/2.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/3.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/3.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/4.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/4.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/5.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/5.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide movies-slide">
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/1.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/1.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/2.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/2.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/3.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/3.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/4.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/4.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/5.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/5.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie is-year">
+													<span class="title-3 c-movie__year">2019</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="movies__slider">
+									<div class="swiper movies__slider-container" data-swiper="movies-second">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide movies-slide">
+												<div class="c-movie is-year">
+													<span class="title-3 c-movie__year">2020</span>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/1.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/1.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/2.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/2.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/3.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/3.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/4.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/4.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/5.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/5.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide movies-slide">
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/1.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/1.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie is-year">
+													<span class="title-3 c-movie__year">2018</span>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/2.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/2.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/3.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/3.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/4.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/4.jpg" alt="">
+													</div>
+												</div>
+												<div class="c-movie">
+													<div class="c-movie__thumb">
+														<img class="c-movie__img is-main" src="./assets/img/movies/5.jpg" alt="">
+														<img class="c-movie__img is-second" src="./assets/img/movies/5.jpg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> -->
+							</div>
+							<div class="swiper-arrows movies__arrows">
+								<button
+									class="swiper-arrow is-prev movies__arrow"
+									style="transform: rotate(180deg)"
+								></button>
+								<button class="swiper-arrow is-next movies__arrow"></button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section advert">
+					<div class="advert__container">
+						<div class="s-header">
+							<h2 class="title-1 s-header__title">Advertising</h2>
+						</div>
+						<div class="advert__body">
+							<div class="advert__slides">
+								<div class="advert__slider">
+									<div class="swiper advert__slider-container" data-swiper="advert">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide advert-slide">
+												<div class="c-advert">
+													<div class="c-advert__thumb">
+														<img class="c-advert__img is-main" src="./assets/img/adverts/1.jpg" alt="">
+														<img class="c-advert__img is-second" src="./assets/img/adverts/1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="swiper-arrows advert__arrows">
+								<button
+									class="swiper-arrow is-prev advert__arrow"
+									style="transform: rotate(180deg)"
+								></button>
+								<button class="swiper-arrow is-next advert__arrow"></button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			{% include "sections/footer.html" %}
+		</div>
+
+		<div class="modal" data-modal-id="video" data-close-on-bg>
+			<div class="modal__wrap">
+				<div class="modal__window"></div>
+				<button class="burger is-active modal-close" data-modal-close>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="modal__bg"></div>
+			</div>
+		</div>
+
+		<a href="http://ugryumov.com" style="display: none">front-end</a>
+		<script src="./assets/js/bundle.js"></script>
+	</body>
+</html>

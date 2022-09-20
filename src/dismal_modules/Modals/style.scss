@@ -17,7 +17,8 @@
         overflow-y: auto;
 
         & .modal__wrap {
-            transform: translate(0, 0);
+            transform: scale(1);
+			opacity: 1;
         }
     }
 }
@@ -33,27 +34,47 @@
 
 .modal__wrap {
     min-height: 100%;
-    transform: translate(0, 100vh);
+    // transform: translate(0, 100vh);
+	transform: scale(.5);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 16px;
+	opacity: 0;
     transition: $tr;
 }
 
 .modal__window {
     position: relative;
-    max-width: 615px;
+    max-width: 800px;
     width: 100%;
-    background: #fff;
-    padding: 24px;
+    background: $dark;
+	border-radius: $radius-s;
+	overflow: hidden;
+    // padding: 24px;
+	aspect-ratio: 1 / .56;
+
+	& iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
-.modal-close {
+.modal-close.burger {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 36px;
-    height: 36px;
+    top: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
     transition: $tr;
+
+	@media (max-width: $mobile-l) {
+		top: 10px;
+		right: 10px;
+		width: 40px;
+		height: 40px;
+	}
 }

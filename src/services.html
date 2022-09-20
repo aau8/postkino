@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="loader" id="loader">
+			<div class="loader__wrap">
+				<div class="loader__body">
+					<div class="loader__icon"></div>
+					<div class="loader__progress" style="--progress: 0px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<main class="main">
+				{% include "sections/header.html" %}
+				<div class="main__body">
+					<div class="main__container">
+						<div class="main__content">
+							<h1 class="title-1 main__title">Services</h1>
+						</div>
+						<div class="main__slider">
+							<div class="swiper main__slider-container" data-swiper="services">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Filming</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Editing</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/services/editing.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">VFX</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/services/vfx.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">SFX</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/services/sfx.jpg" alt="" /></div>
+									</div>
+									<div class="swiper-slide detail-slide">
+										<div class="detail-slide__content">
+											<span class="title-4 detail-slide__title">Color Grading</span>
+										</div>
+										<div class="detail-slide__img"><img src="./assets/img/services/color-grading.jpg" alt="" /></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-arrows main__arrows services__arrows">
+								<button
+									class="swiper-arrow is-prev services__arrow"
+									style="transform: rotate(180deg)"
+								></button>
+								<button class="swiper-arrow is-next services__arrow"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__bg">
+					<div class="swiper main__bg-container" data-swiper="main-bg">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/2.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/1.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/3.jpg" alt="" />
+							</div>
+							<div class="swiper-slide main__bg-slide">
+								<img src="./assets/img/main/4.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<div class="content has-shadow">
+				<section class="section s-services">
+					<div class="s-services__container">
+						<div class="s-services__body">
+							<div class="b-service">
+								<div class="b-service__img"><img src="./assets/img/services/filming.jpg" alt=""></div>
+								<div class="b-service__content">
+									<span class="title-2 b-service__title">Filming</span>
+									<p class="title-3 b-service__text">
+										Our professional team will help you organize and conduct the shooting of a commercial, TV series or a feature film.
+									</p>
+								</div>
+							</div>
+							<div class="b-service">
+								<div class="b-service__img"><img src="./assets/img/services/editing.jpg" alt=""></div>
+								<div class="b-service__content">
+									<span class="title-2 b-service__title">Editing</span>
+									<p class="title-3 b-service__text">
+										We provide full-cycle video editing of feature films, TV series and comme-rcials. Our studio is equipped with several powerful editing stations based on Davinci Resolve.
+									</p>
+								</div>
+							</div>
+							<div class="b-service">
+								<div class="b-service__img"><img src="./assets/img/services/vfx.jpg" alt=""></div>
+								<div class="b-service__content">
+									<span class="title-2 b-service__title">VFX</span>
+									<p class="title-3 b-service__text">
+										Creating computer graphics and visual effects has always been and remains our main area of work. Our team has vast experience in the visual effects industry. The studio is equipped with powerful workstations, as well as its own render farm. Our supervisors are always on the set to supervise filming, ensuring maximum quality of computer graphics and visual effects.
+									</p>
+								</div>
+							</div>
+							<div class="b-service">
+								<div class="b-service__img"><img src="./assets/img/services/sfx.jpg" alt=""></div>
+								<div class="b-service__content">
+									<span class="title-2 b-service__title">SFX</span>
+									<p class="title-3 b-service__text">
+										Our professional composer and sound engineer will create stunning music and cool sound effects for your commercial, TV series, or feature film.
+									</p>
+								</div>
+							</div>
+							<div class="b-service">
+								<div class="b-service__img"><img src="./assets/img/services/color-grading.jpg" alt=""></div>
+								<div class="b-service__content">
+									<span class="title-2 b-service__title">Color Grading</span>
+									<p class="title-3 b-service__text">
+										Color  grading  is  an  important  part of the post-production process.  We provide   complete   color   correction in our viewing room based on Davinci Resolve.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			{% include "sections/footer.html" %}
+		</div>
+
+		<a href="http://ugryumov.com" style="display: none">front-end</a>
+		<script src="./assets/js/bundle.js"></script>
+	</body>
+</html>
