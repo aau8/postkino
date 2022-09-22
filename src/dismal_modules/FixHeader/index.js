@@ -48,15 +48,17 @@ export default function FixHeader() {
 }
 
 // Отступ при скроле
-document.addEventListener('click', e => {
+// document.addEventListener('click', e => {
 
-	if (e.target.tagName === 'A' && e.target.getAttribute('href').includes('#')) {
-		const section = document.querySelector(e.target.hash)
+// 	if (e.target.tagName === 'A' && e.target.getAttribute('href').includes('#')) {
+// 		console.log(e)
 
-		e.preventDefault()
+// 		const section = document.querySelector(e.target.hash)
 
-		if (section) {
-			window.scrollTo(0, section.getBoundingClientRect().top - 50)
-		}
-	}
-})
+// 		e.preventDefault()
+
+// 		if (section) {
+// 			window.scrollTo(0, section.getBoundingClientRect().top - 50)
+// 		}
+// 	}
+// })

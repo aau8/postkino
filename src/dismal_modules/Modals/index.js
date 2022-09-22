@@ -153,7 +153,7 @@ export default class Modals {
 	// Инизиализация Modal
 	_init() {
 		if (!document.querySelector('[data-modal-id]')) {
-			console.warn('[Modals]: Модальные окна не найдены!')
+			// console.warn('[Modals]: Модальные окна не найдены!')
 			return
 		}
 		this._btnOpen()

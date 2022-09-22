@@ -2,12 +2,18 @@ import FixHeader from "../dismal_modules/FixHeader/index.js"
 import ZoomInImg from "../dismal_modules/ZoomInImg/index.js"
 import Modals from "../dismal_modules/Modals/index.js"
 
+import './MainBg.js'
+import './Reels.js'
+import './Commerce.js'
+import './Movies.js'
+import './MainMovies.js'
 import './Loader.js'
 import '../dismal_modules/Menu.js'
 import '../dismal_modules/Signa/index.js'
 import "./Scroll.js"
 import "./sliders.js"
-import "./CardArea.js"
+import "./CardHover.js"
+import "./ArrowDown.js"
 
 FixHeader()
 ZoomInImg()

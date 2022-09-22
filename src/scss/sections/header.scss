@@ -8,16 +8,19 @@
 .header__area {
 	width: 100%;
 	height: var(--header-height);
+	transition: background 0.4s, height 0.4s;
+	// background: rgba(19,19,19,0.8);
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 120%;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0.97) 37.25%, rgba(0, 0, 0, 0) 84.02%);
-	}
+	// &::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 120%;
+	// 	// background: linear-gradient(180deg, rgba(0, 0, 0, 0.97) 37.25%, rgba(0, 0, 0, 0) 84.02%);
+
+	// }
 }
 
 @import "../../dismal_modules/FixHeader/style";
@@ -41,9 +44,15 @@
 		left: 0;
 		width: 100%;
 		height: 100vh;
-		// display: flex;
 		pointer-events: none;
-		transition: background-color $tr;
+
+		&.on-mobile {
+			transition: background-color $tr;
+
+			& .menu__wrap {
+				transition: transform $tr;
+			}
+		}
 
 		&.is-show {
 			background-color: rgba(0,0,0,.2);
@@ -67,7 +76,6 @@
 		box-shadow: 0 1px 1px $dark;
 		overflow: auto;
 		transform: translate(100%, 0);
-		transition: transform $tr;
 
 		@include scrollbar(6px, 100%);
 	}

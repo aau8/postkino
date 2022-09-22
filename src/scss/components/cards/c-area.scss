@@ -6,6 +6,7 @@
 	border: 1px solid $stroke-gray;
 	border-radius: $radius-s;
 	overflow: hidden;
+	transition: $tr;
 
 	&::before {
 		content: '';
@@ -22,7 +23,6 @@
 	}
 
 	@media (any-hover: hover) {
-		transition: $tr;
 
 		&:hover {
 			transform: scale(1.1);

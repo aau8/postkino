@@ -91,7 +91,7 @@
 	border-radius: $radius-s;
 	overflow: hidden;
 	aspect-ratio: 1 / .57;
-	opacity: .4;
+	opacity: 0;
 	transition: $tr;
 
 	@media (max-width: 600px) {
@@ -138,6 +138,15 @@
 		@media (max-width: $mobile-l) {
 			transform: scale(1.17);
 		}
+	}
+
+	// &.swiper-slide-visible {
+	// 	opacity: 1;
+	// }
+
+	&.swiper-slide-next,
+	&.swiper-slide-prev {
+		opacity: .4;
 	}
 
 	@media (any-hover: hover) {

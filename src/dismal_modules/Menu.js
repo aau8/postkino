@@ -18,6 +18,7 @@ class Menu {
 	 * Инициализация меню
 	 */
 	_init() {
+
 		document.addEventListener('click', e => {
 
 			if (e.target.classList.contains('[data-menu-close]') || e.target.closest('[data-menu-close]')) {
@@ -41,6 +42,20 @@ class Menu {
 		})
 
 		window.Menu = this
+
+		this.onMobile()
+		window.addEventListener('resize', this.onMobile)
+	}
+
+	onMobile() {
+		// console.log(this.menu, window.Menu)
+
+		if (window.innerWidth <= 800) {
+			window.Menu.menu.classList.add('on-mobile')
+		}
+		else {
+			window.Menu.menu.classList.remove('on-mobile')
+		}
 	}
 
 	/**

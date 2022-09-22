@@ -1,12 +1,12 @@
-.advert__body {
+.commerce__body {
 	position: relative;
 }
 
-.advert__slides {
+.commerce__slides {
 
 }
 
-.advert__slider {
+.commerce__slider {
 	// position: relative;
 
 	& .swiper-wrapper {
@@ -28,11 +28,11 @@
 	}
 }
 
-.advert__slider-container {
+.commerce__slider-container {
 	width: 100%;
 }
 
-.advert-slide {
+.commerce-slide {
 	// display: grid;
 	// grid-template-columns: repeat(4, 1fr);
 	// gap: 40px;
@@ -44,7 +44,7 @@
 	}
 }
 
-.advert__arrows {
+.commerce__arrows {
 	position: absolute;
 	z-index: 1;
 	top: 50%;

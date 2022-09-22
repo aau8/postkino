@@ -44,6 +44,7 @@ mix.after(() => {
 
 mix.copy(`${SRC_DIR}/img/`, `${PROD_DIR}/assets/img/`)
 mix.copy(`${SRC_DIR}/resources/fonts`, `${PROD_DIR}/assets/fonts/`)
+mix.copy(`${SRC_DIR}/resources/data`, `${PROD_DIR}/assets/data/`)
 
 // mix.replaceInFile({
 // 	files: `${PROD_DIR}/assets/css/style.css`,

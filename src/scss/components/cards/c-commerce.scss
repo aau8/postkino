@@ -1,19 +1,44 @@
-.c-advert {
+.c-commerce {
 	width: 100%;
 	aspect-ratio: 1 / .58;
+
+	&:active {
+
+		& .c-commerce__thumb {
+			transform: scale(1);
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+
+			& .c-commerce__thumb {
+				transform: scale(1.1);
+			}
+		}
+
+		&:active {
+
+			& .c-commerce__thumb {
+				transform: scale(1);
+			}
+		}
+	}
 }
 
-.c-advert__thumb {
+.c-commerce__thumb {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	transition: $tr;
 
 	& img {
 		object-fit: cover;
 	}
 }
 
-.c-advert__img {
+.c-commerce__img {
 
 	&.is-second {
 		position: absolute;

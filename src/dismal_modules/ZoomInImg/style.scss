@@ -1,9 +1,3 @@
-.apple {
-	background: green;
-	width: 200px;
-	height: 200px;
-}
-
 .big-img {
     position: fixed;
     top: 0;
@@ -18,6 +12,7 @@
     z-index: 10;
     opacity: 0;
     transition: var(--zoom-img-transition);
+	overflow: initial;
 
     &.is-show {
         opacity: 1;
@@ -31,12 +26,148 @@
 .big-img__body {
 	width: 100%;
 	height: 100%;
+	display: flex;
 	transform: scale(0.5);
 	transition: var(--zoom-img-transition);
+}
 
-	& img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
+.big-img__img {
+	position: relative;
+	width: calc(100% - 96px);
+	height: calc(100% - 96px);
+	object-fit: contain;
+	opacity: 0;
+	// padding: 0 48px;
+	margin: auto;
+	cursor: zoom-out;
+	transition: opacity .5s;
+
+	&.is-current {
+		opacity: 1;
+	}
+
+	&.is-new {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		// opacity: 1;
+	}
+}
+
+.big-img__arrows {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	pointer-events: none;
+}
+
+.big-img__arrow {
+	position: relative;
+	width: 50px;
+	aspect-ratio: 1 / 1;
+	background: rgba(19, 19, 19, 0.2);
+	pointer-events: fill;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 28px;
+		aspect-ratio: 1 / 1;
+		mask: center/contain no-repeat url('../img/sprite.svg#arrow-short');
+		background: $stroke-gray;
+		transition: $tr;
+	}
+
+	&.is-prev {
+		transform: rotate(180deg);
+	}
+
+	&.is-next {
+		transform: rotate(0);
+	}
+
+	&:active {
+
+		&::before {
+			background: $light;
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+
+			&::before {
+				background: $light;
+			}
+		}
+
+		&:active {
+
+			&::before {
+				background: $stroke-gray;
+			}
+		}
+	}
+}
+
+.big-img__close {
+	position: absolute;
+	top: 24px;
+	right: 24px;
+	width: 48px;
+	aspect-ratio: 1 / 1;
+	background: rgba(19, 19, 19, 0.2);
+
+	& span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 60%;
+		height: 2px;
+		background: $stroke-gray;
+		transition: $tr;
+
+		&:nth-child(1) {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+
+	&:active {
+
+		& span {
+			background: $light;
+		}
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+
+			& span {
+				background: $light;
+			}
+		}
+
+		&:active {
+
+			& span {
+				background: $stroke-gray;
+			}
+		}
 	}
 }

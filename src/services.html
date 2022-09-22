@@ -23,40 +23,54 @@
 					<div class="main__container">
 						<div class="main__content">
 							<h1 class="title-1 main__title">Services</h1>
+							<!-- <span class="title-2 main__subtitle"></span>
+							<div class="title-3 main__text">
+								<p></p>
+							</div> -->
 						</div>
 						<div class="main__slider">
 							<div class="swiper main__slider-container" data-swiper="services">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide detail-slide">
-										<div class="detail-slide__content">
-											<span class="title-4 detail-slide__title">Filming</span>
+									<a href="#filming" class="swiper-slide detail-slide">
+										<div class="detail-slide__wrap">
+											<div class="detail-slide__content">
+												<span class="title-4 detail-slide__title">Filming</span>
+											</div>
+											<div class="detail-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
 										</div>
-										<div class="detail-slide__img"><img src="./assets/img/services/filming.jpg" alt="" /></div>
-									</div>
-									<div class="swiper-slide detail-slide">
-										<div class="detail-slide__content">
-											<span class="title-4 detail-slide__title">Editing</span>
+									</a>
+									<a href="#editing" class="swiper-slide detail-slide">
+										<div class="detail-slide__wrap">
+											<div class="detail-slide__content">
+												<span class="title-4 detail-slide__title">Editing</span>
+											</div>
+											<div class="detail-slide__img"><img src="./assets/img/services/editing.jpg" alt="" /></div>
 										</div>
-										<div class="detail-slide__img"><img src="./assets/img/services/editing.jpg" alt="" /></div>
-									</div>
-									<div class="swiper-slide detail-slide">
-										<div class="detail-slide__content">
-											<span class="title-4 detail-slide__title">VFX</span>
+									</a>
+									<a href="#vfx" class="swiper-slide detail-slide">
+										<div class="detail-slide__wrap">
+											<div class="detail-slide__content">
+												<span class="title-4 detail-slide__title">VFX</span>
+											</div>
+											<div class="detail-slide__img"><img src="./assets/img/services/vfx.jpg" alt="" /></div>
 										</div>
-										<div class="detail-slide__img"><img src="./assets/img/services/vfx.jpg" alt="" /></div>
-									</div>
-									<div class="swiper-slide detail-slide">
-										<div class="detail-slide__content">
-											<span class="title-4 detail-slide__title">SFX</span>
+									</a>
+									<a href="#sfx" class="swiper-slide detail-slide">
+										<div class="detail-slide__wrap">
+											<div class="detail-slide__content">
+												<span class="title-4 detail-slide__title">SFX</span>
+											</div>
+											<div class="detail-slide__img"><img src="./assets/img/services/sfx.jpg" alt="" /></div>
 										</div>
-										<div class="detail-slide__img"><img src="./assets/img/services/sfx.jpg" alt="" /></div>
-									</div>
-									<div class="swiper-slide detail-slide">
-										<div class="detail-slide__content">
-											<span class="title-4 detail-slide__title">Color Grading</span>
+									</a>
+									<a href="#color-gradient" class="swiper-slide detail-slide">
+										<div class="detail-slide__wrap">
+											<div class="detail-slide__content">
+												<span class="title-4 detail-slide__title">Color Grading</span>
+											</div>
+											<div class="detail-slide__img"><img src="./assets/img/services/color-grading.jpg" alt="" /></div>
 										</div>
-										<div class="detail-slide__img"><img src="./assets/img/services/color-grading.jpg" alt="" /></div>
-									</div>
+									</a>
 								</div>
 							</div>
 							<div class="swiper-arrows main__arrows services__arrows">
@@ -69,31 +83,19 @@
 						</div>
 					</div>
 				</div>
-				<div class="main__bg">
+				<div class="main__bg" data-db="services.json">
 					<div class="swiper main__bg-container" data-swiper="main-bg">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/2.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/1.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/3.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/4.jpg" alt="" />
-							</div>
-						</div>
+						<div class="swiper-wrapper"></div>
 					</div>
 				</div>
+				<button class="main-arrow"></button>
 			</main>
 
 			<div class="content has-shadow">
 				<section class="section s-services">
 					<div class="s-services__container">
 						<div class="s-services__body">
-							<div class="b-service">
+							<div class="b-service" id="filming">
 								<div class="b-service__img"><img src="./assets/img/services/filming.jpg" alt=""></div>
 								<div class="b-service__content">
 									<span class="title-2 b-service__title">Filming</span>
@@ -102,7 +104,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="b-service">
+							<div class="b-service" id="editing">
 								<div class="b-service__img"><img src="./assets/img/services/editing.jpg" alt=""></div>
 								<div class="b-service__content">
 									<span class="title-2 b-service__title">Editing</span>
@@ -111,7 +113,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="b-service">
+							<div class="b-service" id="vfx">
 								<div class="b-service__img"><img src="./assets/img/services/vfx.jpg" alt=""></div>
 								<div class="b-service__content">
 									<span class="title-2 b-service__title">VFX</span>
@@ -120,7 +122,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="b-service">
+							<div class="b-service" id="sfx">
 								<div class="b-service__img"><img src="./assets/img/services/sfx.jpg" alt=""></div>
 								<div class="b-service__content">
 									<span class="title-2 b-service__title">SFX</span>
@@ -129,7 +131,7 @@
 									</p>
 								</div>
 							</div>
-							<div class="b-service">
+							<div class="b-service" id="color-gradient">
 								<div class="b-service__img"><img src="./assets/img/services/color-grading.jpg" alt=""></div>
 								<div class="b-service__content">
 									<span class="title-2 b-service__title">Color Grading</span>

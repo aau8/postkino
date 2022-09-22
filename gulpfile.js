@@ -4,6 +4,7 @@ import path from 'path'
 // Импортирование задач
 import ftp from './config/gulp/ftp.js'
 import zip from './config/gulp/zip.js'
+// import convertImages from './config/gulp/convertImages.js'
 
 // Глобальные переменные
 global.app = {
@@ -19,3 +20,4 @@ global.app = {
 
 export { ftp }
 export { zip }
+// export { convertImages }

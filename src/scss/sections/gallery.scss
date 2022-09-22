@@ -80,6 +80,26 @@
 	border: 1px solid $stroke-gray;
 	border-radius: $radius-s;
 	overflow: hidden;
+	transition: $tr;
+
+	&.is-darkened {
+		opacity: .4;
+	}
+
+	&:active {
+		transform: scale(.95);
+	}
+
+	@media (any-hover: hover) {
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		&:active {
+			transform: scale(1);
+		}
+	}
 
 	& img {
 		object-fit: cover;

@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Animation",
+		"thumb": "./assets/img/services/filming.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	},
+	{
+		"title": "Environments",
+		"thumb": "./assets/img/services/editing.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	},
+	{
+		"title": "Crowds",
+		"thumb": "./assets/img/reels/1.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	},
+	{
+		"title": "VFX",
+		"thumb": "./assets/img/reels/2.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	},
+	{
+		"title": "Compositing",
+		"thumb": "./assets/img/reels/3.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	},
+	{
+		"title": "Motion Design",
+		"thumb": "./assets/img/services/color-grading.jpg",
+		"video": "https://www.youtube.com/embed/jfKfPfyJRdk"
+	}
+]

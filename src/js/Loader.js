@@ -1,3 +1,8 @@
+// const loader = document.getElementById('loader')
+
+// loader.classList.add('is-hide')
+
+
 import imagesLoaded from "imagesloaded";
 import { bodyLock, bodyUnlock } from "../dismal_modules/Utilities.js";
 
@@ -9,9 +14,10 @@ bodyLock()
 setTimeout(() => {
 	loader.classList.add('is-load')
 
+	// window.scrollBy(0, -window.pageYOffset)
+
 	setTimeout(() => {
 		const imgLoad = imagesLoaded('.main, .gallery')
-		console.log(imgLoad)
 		const imgCount = imgLoad.images.length
 		let loadedImagesCount = 0
 
@@ -26,11 +32,11 @@ setTimeout(() => {
 				setTimeout(() => {
 					loader.classList.remove('is-load')
 					loader.classList.add('is-hide')
-					bodyUnlock()
-				}, 500)
+					bodyUnlock(380)
+				}, 800)
 			}
 		});
-	}, 500)
+	}, 1000)
 }, 300)
 
 

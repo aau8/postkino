@@ -1,10 +1,9 @@
 import { animate } from "../dismal_modules/Utilities.js"
 
-const cardElems = Array.from(document.querySelectorAll('.c-area'))
-// const TRANSITION = 1000
+const cardElems = Array.from(document.querySelectorAll('[data-card-dark]'))
+
 
 cardElems.forEach(card => {
-	// card.style.transform = 'scale(1)'
 
 	card.addEventListener('mouseenter', () => {
 		setTimeout(() => {

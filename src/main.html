@@ -26,39 +26,11 @@
 						<div class="main__content">
 							<h1 class="title-1 main__title">POST<span>KINO</span></h1>
 							<span class="title-2 main__subtitle">Production | Post - production Studio</span>
-							<a href="#" class="btn has-icon main__btn">Portfolio</a>
+							<a href="./portfolio.html" class="btn has-icon main__btn">Portfolio</a>
 						</div>
 						<div class="main__slider">
 							<div class="swiper main__slider-container" data-swiper="main">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/1.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/2.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/3.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/4.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/5.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/6.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/7.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/8.jpg" alt="" />
-									</div>
-									<div class="swiper-slide main-slide" style="opacity: 1">
-										<img src="./assets/img/movies/9.jpg" alt="" />
-									</div>
-								</div>
+								<div class="swiper-wrapper"></div>
 							</div>
 							<div class="swiper-arrows main__arrows">
 								<button
@@ -70,27 +42,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="main__bg">
+				<div class="main__bg" data-db="main.json">
 					<div class="swiper main__bg-container" data-swiper="main-bg">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/1.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/2.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/3.jpg" alt="" />
-							</div>
-							<div class="swiper-slide main__bg-slide">
-								<img src="./assets/img/main/4.jpg" alt="" />
-							</div>
-						</div>
+						<div class="swiper-wrapper"></div>
 					</div>
 				</div>
+				<button class="main-arrow"></button>
 			</main>
 
-			<div class="content">
+			<div class="content has-shadow">
 				<section class="section s-about" id="about">
 					<div class="s-about__container">
 						<h1 class="title-1 s-about__title">About Us</h1>
@@ -108,30 +68,31 @@
 							<h2 class="title-2 s-header__title">Our <span>main areas</span> of focus:</h2>
 						</div>
 						<div class="s-areas__body">
-							<a href="#" class="c-area" style="background-image: url(./assets/img/services/vfx.jpg)">
+							<a href="./services.html#vfx" class="c-area" style="background-image: url(./assets/img/services/vfx.jpg)" data-card-dark>
 								<div class="c-area__content">
 									<span class="title-3 c-area__title">Visual effects</span>
 								</div>
 							</a>
-							<a href="#" class="c-area" style="background-image: url(./assets/img/services/sfx.jpg)">
+							<a href="./services.html#sfx" class="c-area" style="background-image: url(./assets/img/services/sfx.jpg)" data-card-dark>
 								<div class="c-area__content">
 									<span class="title-3 c-area__title">Composer and sound <br />design services</span>
 								</div>
 							</a>
-							<a href="#" class="c-area" style="background-image: url(./assets/img/services/filming.jpg)">
+							<a href="./services.html#filming" class="c-area" style="background-image: url(./assets/img/services/filming.jpg)" data-card-dark>
 								<div class="c-area__content">
 									<span class="title-3 c-area__title">Filming</span>
 								</div>
 							</a>
-							<a href="#" class="c-area" style="background-image: url(./assets/img/services/editing.jpg)">
+							<a href="./services.html#editing" class="c-area" style="background-image: url(./assets/img/services/editing.jpg)" data-card-dark>
 								<div class="c-area__content">
 									<span class="title-3 c-area__title">Full video <br />editing cycle</span>
 								</div>
 							</a>
 							<a
-								href="#"
+								href="./services.html#color-gradient"
 								class="c-area"
 								style="background-image: url(./assets/img/services/color-grading.jpg)"
+								data-card-dark
 							>
 								<div class="c-area__content">
 									<span class="title-3 c-area__title"
@@ -161,6 +122,18 @@
 			</div>
 
 			{% include "sections/footer.html" %}
+		</div>
+
+		<div class="modal" data-modal-id="video" data-close-on-bg>
+			<div class="modal__wrap">
+				<div class="modal__window"></div>
+				<button class="burger is-active modal-close" data-modal-close>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<div class="modal__bg"></div>
+			</div>
 		</div>
 
 		<a href="http://ugryumov.com" style="display: none">front-end</a>
