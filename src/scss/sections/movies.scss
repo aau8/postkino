@@ -59,7 +59,12 @@
 	grid-template-columns: repeat(6, 1fr);
 	gap: 40px;
 	opacity: 0;
+	pointer-events: none;
 	transition: opacity $tr;
+
+	&.swiper-slide-visible {
+		pointer-events: fill;
+	}
 
 	@media (max-width: $tablet) {
 		gap: 20px;

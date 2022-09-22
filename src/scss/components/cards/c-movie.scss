@@ -1,6 +1,11 @@
 .c-movie {
 	width: 100%;
 	aspect-ratio: 1 / 1.375;
+	transition: $tr;
+
+	&.is-darkened {
+		opacity: .4;
+	}
 
 	&.is-year {
 		display: flex;

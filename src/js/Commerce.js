@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination, Grid } from "swiper"
+import setDarkHover from "./CardHover.js"
 
 const commerce = document.querySelector('.commerce')
 
@@ -8,17 +9,31 @@ if (commerce) {
 	fetch('./assets/data/commerce.json')
 		.then(res => res.json())
 		.then(data => {
-			return data.map(img => {
-				return `
-					<div class="swiper-slide commerce-slide">
-						<div class="c-commerce">
-							<div class="c-commerce__thumb">
-								<img class="c-commerce__img is-main" src="${img}" alt="">
-								<img class="c-commerce__img is-second" src="${img}" alt="">
+			return data.map(comm => {
+				if (comm.video) {
+					return `
+						<div class="swiper-slide commerce-slide" data-card-dark data-modal-open="video" data-video-src="${comm.video}" style="cursor:pointer;">
+							<div class="c-commerce">
+								<div class="c-commerce__thumb">
+									<img class="c-commerce__img is-main" src="${comm.img}" alt="">
+									<img class="c-commerce__img is-second" src="${comm.img}" alt="">
+								</div>
 							</div>
 						</div>
-					</div>
-				`.trim()
+					`.trim()
+				}
+				else {
+					return `
+						<div class="swiper-slide commerce-slide" data-card-dark>
+							<div class="c-commerce">
+								<div class="c-commerce__thumb">
+									<img class="c-commerce__img is-main" src="${comm.img}" alt="">
+									<img class="c-commerce__img is-second" src="${comm.img}" alt="">
+								</div>
+							</div>
+						</div>
+					`.trim()
+				}
 			}).join('')
 		})
 		.then(slides => {
@@ -71,8 +86,7 @@ if (commerce) {
 					prevEl: '.commerce__arrow.is-prev',
 				},
 			});
-		})
-		.catch(err => {
-			console.log
+
+			setDarkHover('[data-swiper=commerce] [data-card-dark-container]')
 		})
 }

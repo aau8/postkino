@@ -1,6 +1,7 @@
 import FixHeader from "../dismal_modules/FixHeader/index.js"
 import ZoomInImg from "../dismal_modules/ZoomInImg/index.js"
 import Modals from "../dismal_modules/Modals/index.js"
+import setDarkHover from "./CardHover.js"
 
 import './MainBg.js'
 import './Reels.js'
@@ -12,11 +13,19 @@ import '../dismal_modules/Menu.js'
 import '../dismal_modules/Signa/index.js'
 import "./Scroll.js"
 import "./sliders.js"
-import "./CardHover.js"
+// import "./CardHover.js"
 import "./ArrowDown.js"
 
 FixHeader()
 ZoomInImg()
+
+if (document.querySelector('.gallery')) {
+	setDarkHover('.gallery [data-card-dark-container]')
+}
+
+if (document.querySelector('.s-areas')) {
+	setDarkHover('.s-areas [data-card-dark-container]')
+}
 
 const modals = new Modals()
 const modalVideo = modals.get('video')

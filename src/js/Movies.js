@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination, Grid } from "swiper"
+import setDarkHover from "./CardHover.js"
 
 const movies = document.querySelector('.movies')
 
@@ -19,7 +20,7 @@ if (movies) {
 					}
 					if (movie.video) {
 						return `
-							<div class="c-movie" data-modal-open="video" data-video-src="${movie.video}" style="cursor:pointer;">
+							<div class="c-movie" data-modal-open="video" data-card-dark data-video-src="${movie.video}" style="cursor:pointer;">
 								<div class="c-movie__thumb">
 									<img class="c-movie__img is-main" src="${movie.img}" alt="">
 									<img class="c-movie__img is-second" src="${movie.img}" alt="">
@@ -29,7 +30,7 @@ if (movies) {
 					}
 					else {
 						return `
-							<div class="c-movie">
+							<div class="c-movie" data-card-dark>
 								<div class="c-movie__thumb">
 									<img class="c-movie__img is-main" src="${movie.img}" alt="">
 									<img class="c-movie__img is-second" src="${movie.img}" alt="">
@@ -90,6 +91,8 @@ if (movies) {
 					prevEl: '.movies__arrow.is-prev',
 				},
 			});
+
+			setDarkHover('[data-swiper=movies] [data-card-dark-container]')
 		})
 }
 

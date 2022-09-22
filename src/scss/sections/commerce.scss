@@ -14,14 +14,14 @@
 		& > * {
 
 			&:nth-child(-n + 4) {
-				padding-bottom: 120px;
+				margin-bottom: 120px;
 
 				@media (max-width: 1400px) {
-					padding-bottom: 60px;
+					margin-bottom: 60px;
 				}
 
 				@media (max-width: $tablet) {
-					padding-bottom: 30px;
+					margin-bottom: 30px;
 				}
 			}
 		}
@@ -37,10 +37,16 @@
 	// grid-template-columns: repeat(4, 1fr);
 	// gap: 40px;
 	opacity: 0;
+	pointer-events: none;
 	transition: opacity $tr;
 
 	&.swiper-slide-visible {
 		opacity: 1;
+		pointer-events: fill;
+
+		&.is-darkened {
+			opacity: .4;
+		}
 	}
 }
 
